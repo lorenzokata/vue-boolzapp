@@ -39,6 +39,7 @@
     justify-content: space-between;
     background-color: #EAEAEA;
     font-size: 18px;
+    border: none;
 }
 
 .left-side{
@@ -137,6 +138,7 @@
 .contacts{
     height: calc(100% - 290px);
     overflow-y: auto;
+    background-color: white;
 }
 
 .contact{
@@ -144,6 +146,7 @@
     align-items: center;
     height: 130px;
     padding: 20px;
+    border-bottom: 1px solid lightgrey;
 }
 
 .contact img{
@@ -175,10 +178,6 @@
 
 .debug .container{
     background-color: red;
-}
-
-.debug .side{
-    background-color: yellow;
 }
 
 .debug .main{
