@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Boolzapp</title>
 </head>
-<body class="debug">
+<body>
     
     <div id="app" class="background">
         <div class="container">
@@ -46,43 +46,10 @@
                 </div>
                 <div class="contacts">
                     <ul>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
+                        <li v-for="contact in contacts" @click="openChat(contact)" class="contact">
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" class="contact-picture" alt="contact picture">
+                            <div class="contact-name">{{contact.name}}</div>
                         </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-                        <li class="contact">
-                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
-                            <div class="contact-name">Pincopallo</div>
-                        </li>
-
                     </ul>
                 </div>
             </section>
@@ -90,9 +57,9 @@
             <section class="main">
                 <div class="chat-header">
                     <div class="left-side">
-                        <img src="img/avatar_4.jpg" class="chat-picture" alt="profile picture">
+                        <img id="chat-picture" src="img/avatar_4.jpg" class="chat-picture" alt="profile picture">
                         <div class="chat-name-access">
-                            <div class="chat-name">Lorenzo Catalano</div>
+                            <div id="chat-name" class="chat-name"></div>
                             <div class="chat-access">Ultimo accesso</div>
                         </div>
                         

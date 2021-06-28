@@ -36,6 +36,10 @@
 /* LEFT SIDE */
 
 /* sezione profilo */
+.profile{
+    border-right: 1px solid lightgrey;
+}
+
 .profile,.chat-header{
     height: 100px;
     padding: 10px;
@@ -144,7 +148,7 @@
 /* sezione contacts */
 .contacts{
     height: calc(100% - 290px);
-    overflow-y: auto;
+    overflow-y: scroll;
     background-color: white;
 }
 
@@ -154,6 +158,11 @@
     height: 130px;
     padding: 20px;
     border-bottom: 1px solid lightgrey;
+}
+
+.contact:hover{
+    cursor: pointer;
+    background-color: #ecf1f0;
 }
 
 .contact img{
@@ -181,7 +190,6 @@
 }
 
 /* chat */
-
 .chat{
     height: calc(100% - 200px);
     background-image: url(img/mine.jpg);
@@ -190,7 +198,6 @@
 
 
 /* footer */
-
 .footer{
     height: 100px;
     background-color: #EAEAEA;
