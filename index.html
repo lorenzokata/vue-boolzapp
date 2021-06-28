@@ -4,13 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Boolzapp</title>
 </head>
-<body>
+<body class="debug">
     
+    <div id="app" class="background">
+        <div class="container">
 
+            <section class="side">
+                <div class="profile">
+                    <div class="left-side">
+                        <img src="img/avatar_2.jpg" class="profile-picture" alt="profile picture">
+                        <div class="profile-name">Lorenzo Catalano</div>
+                    </div>
+                    <div class="right-side">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <div class="notice">
+                    <div class="bell-box">
+                        <img src="img/bell-slash-solid.svg" alt="icona campanella disattivata">
+                    </div>
+                    <div class="notice-text">
+                        <p>Ricevi notiche di nuovi messaggi</p>
+                        <p class="active-text">Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <div class="contacts">
+                    <ul>
+                        <li class="contact">
+                            <img src="img/avatar_1.jpg" class="contact-picture" alt="contact picture">
+                            <div class="contact-name">Pincopallo</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="main"></section>
+
+        </div>
+    </div>
+<!--  -->
     <script src="script.js"></script>
 </body>
 </html>

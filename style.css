@@ -2,4 +2,185 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.background{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(to bottom, #009688 25%, #D5DBD9 25%);
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    min-width: 900px;
+    height: 90vh;
+}
+
+.side{
+    width: 550px;
+    height: 100%;
+}
+
+.main{
+    width: calc(100% - 550px);
+    height: 100%;
+}
+
+.profile{
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAEAEA;
+    font-size: 18px;
+}
+
+.left-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B1B1B1;
+    font-size: 30px;
+}
+
+.right-side > *{
+    margin: 0 15px;
+}
+
+.notice{
+    display: flex;
+    align-items: center;
+    height: 110px;
+    background-color: #8EDAFC;
+    padding: 20px;
+}
+
+.notice .bell-box{
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    padding: 20px ;
+}
+
+.notice img{
+    height: 100%;
+    filter: invert(68%) sepia(73%) saturate(254%) hue-rotate(166deg) brightness(104%) contrast(98%);
+}
+
+.notice-text{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.notice-text p{
+    padding: 5px;
+}
+
+.active-text{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    color:grey;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 15px;
+    background-color: #FAFAFA;
+
+}
+
+.search-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+    background-color: white;
+    border-right: 1px solid lightgrey;
+}
+
+.search-icon i{
+    font-size: 22px;
+    filter: opacity(0.5);
+}
+
+.search input{
+    width: 85%;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    filter: opacity(0.5);
+}
+
+.contacts{
+    height: calc(100% - 290px);
+    overflow-y: auto;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    height: 130px;
+    padding: 20px;
+}
+
+.contact img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contact .contact-name{
+    align-self: flex-start;
+    padding: 15px;
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.debug .container{
+    background-color: red;
+}
+
+.debug .side{
+    background-color: yellow;
+}
+
+.debug .main{
+    background-color:darksalmon;
 }
