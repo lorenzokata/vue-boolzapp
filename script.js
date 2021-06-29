@@ -53,7 +53,8 @@ const app = new Vue(
             ],
 
             target : 0,
-            text : ""
+            text : "",
+            search : ""
         },
         
         methods: {
@@ -72,8 +73,15 @@ const app = new Vue(
                 }
 
                 this.text = ""
-
             }
         },
+
+        computed: {
+            filteredList() {
+                return this.contacts.filter(contact => {
+                    return contact.name.toLowerCase().includes(this.search.toLowerCase())
+                })
+            }
+        }
     }
 )
