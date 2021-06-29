@@ -5,7 +5,6 @@ const app = new Vue(
         data:{
 
             contacts: [
-
                 {
                 name: 'Michele',
                 avatar: '_1',
@@ -51,13 +50,25 @@ const app = new Vue(
                     }
                     ],
                 }
-            ]
+            ],
 
+            target : 0
         },
         
         methods: {
-            openChat(contact){
-                document.getElementById('chat-name').innerHTML = contact.name;
+            openChat(contact,index){
+                this.target = index;
+            },
+            newMessage(){
+                
+                let text = document.getElementById('input-message').value;
+
+                if (text) {
+                    this.contacts[this.target].messages.push({date: '20/03/2020 16:35:00', text: text, status: 'sent'})
+                }
+
+                document.getElementById('input-message').value = ""
+
             }
         },
     }

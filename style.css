@@ -191,11 +191,39 @@
 
 /* chat */
 .chat{
+    width: 100%;
     height: calc(100% - 200px);
     background-image: url(img/mine.jpg);
     background-repeat: repeat;
+    padding: 5px 80px;
 }
 
+.message{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.message-sent{
+    justify-content:flex-end;
+}
+
+.message-received{
+    justify-content: flex-start;
+}
+
+.sent, .received{
+    max-width: 75%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sent{
+    background-color:#DCF8C6;
+}
+
+.received{
+    background-color:white
+}
 
 /* footer */
 .footer{
