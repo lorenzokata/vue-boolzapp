@@ -82,7 +82,7 @@
                     <div class="emoji">
                         <i class="far fa-smile"></i>
                     </div>
-                    <input type="text" @keyup.enter="newMessage()" class="input-message" name="input-message" id="input-message" placeholder="Scrivi un messaggio">
+                    <input type="text" @keyup.enter="newMessage()" v-model="text" class="input-message" name="input-message" id="input-message" placeholder="Scrivi un messaggio">
                     <div class="voice-message">
                         <i class="fas fa-microphone"></i>
                     </div>

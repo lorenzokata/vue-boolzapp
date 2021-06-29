@@ -52,7 +52,8 @@ const app = new Vue(
                 }
             ],
 
-            target : 0
+            target : 0,
+            text : ""
         },
         
         methods: {
@@ -61,13 +62,16 @@ const app = new Vue(
             },
             newMessage(){
                 
-                let text = document.getElementById('input-message').value;
+                if (this.text) {
 
-                if (text) {
-                    this.contacts[this.target].messages.push({date: '20/03/2020 16:35:00', text: text, status: 'sent'})
+                    this.contacts[this.target].messages.push({date: '20/03/2020 16:35:00', text: this.text, status: 'sent'});
+                    
+                    setTimeout(function(){
+                        app.contacts[app.target].messages.push({date: '20/03/2020 16:35:00', text:"Ok", status: 'received'})
+                    }, 1000);
                 }
 
-                document.getElementById('input-message').value = ""
+                this.text = ""
 
             }
         },
