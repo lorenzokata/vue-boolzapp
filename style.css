@@ -213,8 +213,14 @@
 
 .sent, .received{
     max-width: 75%;
-    padding: 10px;
     border-radius: 8px;
+    position: relative;
+}
+
+.sent:hover .arrow, .received:hover .arrow{
+    filter: opacity(0.5);
+    transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .sent{
@@ -223,6 +229,52 @@
 
 .received{
     background-color:white
+}
+
+.message > span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-text{
+    margin-right: 30px;
+    padding: 10px
+}
+
+.arrow{
+    align-self: flex-start;
+    margin-right: 5px;
+    filter: opacity(0.0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.option-menu{
+    display: none;
+    min-width: 180px;
+    border-radius: 5px;
+}
+
+.active{
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+}
+
+.option-menu ul{
+    list-style: none;
+    width: 100%;
+}
+
+.option-menu li{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.option-menu li:hover{
+    background-color: #F5F5F5;
+    cursor: pointer;
 }
 
 /* footer */

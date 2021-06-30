@@ -13,17 +13,20 @@ const app = new Vue(
                     {
                     date: '10/01/2020 15:30:55',
                     text: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
+                    active : false
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     text: 'Ricordati di dargli da mangiare',
-                    status: 'sent'
+                    status: 'sent',
+                    active : false
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     text: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
+                    active : false
                     }
                     ],
                 },
@@ -36,17 +39,20 @@ const app = new Vue(
                     {
                     date: '20/03/2020 16:30:00',
                     text: 'Ciao come stai?',
-                    status: 'sent'
+                    status: 'sent',
+                    active : false
                     },
                     {
                     date: '20/03/2020 16:30:55',
                     text: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
+                    status: 'received',
+                    active : false
                     },
                     {
                     date: '20/03/2020 16:35:00',
                     text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'sent'
+                    status: 'sent',
+                    active : false
                     }
                     ],
                 }
@@ -54,7 +60,7 @@ const app = new Vue(
 
             target : 0,
             text : "",
-            search : ""
+            search : "",
         },
         
         methods: {
@@ -65,14 +71,23 @@ const app = new Vue(
                 
                 if (this.text) {
 
-                    this.contacts[this.target].messages.push({date: '20/03/2020 16:35:00', text: this.text, status: 'sent'});
+                    this.contacts[this.target].messages.push({date: '20/03/2020 16:35:00', text: this.text, status: 'sent', active : false});
                     
                     setTimeout(function(){
-                        app.contacts[app.target].messages.push({date: '20/03/2020 16:35:00', text:"Ok", status: 'received'})
+                        app.contacts[app.target].messages.push({date: '20/03/2020 16:35:00', text:"Ok", status: 'received', active : false})
                     }, 1000);
                 }
 
                 this.text = ""
+            },
+            showOption(message){
+                message.active = !message.active
+            },
+            deleteMsg(message, index){
+                this.contacts[this.target].messages.splice(index,1);
+                message.active = !message.active
+                console.log(message);
+                console.log(index);
             }
         },
 
