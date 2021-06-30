@@ -61,6 +61,7 @@ const app = new Vue(
             target : 0,
             text : "",
             search : "",
+            now : dayjs()
         },
         
         methods: {
@@ -86,8 +87,6 @@ const app = new Vue(
             deleteMsg(message, index){
                 this.contacts[this.target].messages.splice(index,1);
                 message.active = !message.active
-                console.log(message);
-                console.log(index);
             }
         },
 
@@ -100,3 +99,5 @@ const app = new Vue(
         }
     }
 )
+
+console.log(dayjs().format('DD/MM/YYYY HH:mm:ss'));
