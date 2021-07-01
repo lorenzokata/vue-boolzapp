@@ -78,6 +78,7 @@
                     <div v-for="(message, index) in contacts[target].messages" :class="'message message-' + message.status">
                         <span :class="message.status">
                             <span class="message-text">{{message.text}}</span>
+                            <span class="message-date">{{message.date}}</span>
                             <span class="arrow" @click="showOption(message)"><i class="fas fa-chevron-up"></i></span>
                             <div class="option-menu" :class="{active : message.active}">
                                 <ul>
@@ -86,6 +87,7 @@
                                 </ul>
                             </div>
                         </span>
+
                     </div>
                 </div>
 

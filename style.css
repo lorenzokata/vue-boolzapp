@@ -238,8 +238,13 @@
 }
 
 .message-text{
-    margin-right: 30px;
     padding: 10px
+}
+
+.message-date{
+    align-self: flex-end;
+    color: grey;
+    font-size: 10px;
 }
 
 .arrow{
@@ -249,6 +254,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
+/* menu a tendina */
 .option-menu{
     display: none;
     min-width: 180px;

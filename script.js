@@ -72,10 +72,10 @@ const app = new Vue(
                 
                 if (this.text) {
 
-                    this.contacts[this.target].messages.push({date: '20/03/2020 16:35:00', text: this.text, status: 'sent', active : false});
+                    this.contacts[this.target].messages.push({date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: this.text, status: 'sent', active : false});
                     
                     setTimeout(function(){
-                        app.contacts[app.target].messages.push({date: '20/03/2020 16:35:00', text:"Ok", status: 'received', active : false})
+                        app.contacts[app.target].messages.push({date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text:"Ok", status: 'received', active : false})
                     }, 1000);
                 }
 
