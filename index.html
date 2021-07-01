@@ -51,6 +51,7 @@
                         <li v-for="(contact,index) in filteredList" @click="openChat(contact,index)" class="contact">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" class="contact-picture" alt="contact picture">
                             <div class="contact-name">{{contact.name}}</div>
+                            <div class="last-message">{{contact.messages[contact.messages.length -1].text}}</div>
                         </li>
                     </ul>
                 </div>

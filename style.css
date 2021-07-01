@@ -176,6 +176,13 @@
     font-size: 22px;
 }
 
+.last-message{
+    align-self: flex-end;
+    text-align: right;
+    height: 20px;
+    overflow: hidden;
+    color: grey;
+}
 
 /* RIGHT SIDE */
 

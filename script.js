@@ -100,4 +100,4 @@ const app = new Vue(
     }
 )
 
-console.log(dayjs().format('DD/MM/YYYY HH:mm:ss'));
+console.log();
